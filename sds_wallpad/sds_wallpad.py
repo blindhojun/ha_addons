@@ -1025,7 +1025,7 @@ def serial_new_device(device, idn, packet):
             if device == "energy":
                 payload["name"] = "{}_{}_consumption".format(prefix, ("power", "gas", "water")[idn])
                 payload["unit_of_meas"] = ("W", "m³/h", "m³/h")[idn]
-                payload["val_tpl"] = ("{{ value }}", "{{ value | float / 100 }}", "{{ value | float / 100 }}")[idn]
+                payload["val_tpl"] = ("{{ value | float / 100 }}", "{{ value | float / 100 }}", "{{ value | float / 100 }}")[idn]
                 if idn == 0:
                     payload["dev_cla"] = "power"
 
